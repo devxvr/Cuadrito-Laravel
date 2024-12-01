@@ -38,9 +38,9 @@
     <script src="{{ asset('vendor/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('public/admin/js/scripts.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-    <script src="{{ asset('assets/demo/chart-area-demo.js') }}"></script>
-    <script src="{{ asset('assets/demo/chart-bar-demo.js') }}"></script>
-    <script src="{{ asset('assets/demo/chart-pie-demo.js') }}"></script>
+    <script src="{{ asset('public/admin/js/chart-area-demo.js') }}"></script>
+    <script src="{{ asset('public/admin/js/chart-bar-demo.js') }}"></script>
+    <script src="{{ asset('public/admin/js/chart-pie-demo.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
     <script src="{{ asset('js/litepicker.js') }}"></script>
