@@ -8,9 +8,9 @@
     <meta name="author" content="" />
     <title>@yield('title', 'Cuadrito Bakeshop')</title>
     
-    <link href="{{ asset('css/datatables.style.css') }}" rel="stylesheet" />
-    <link href="{{ asset('css/litepicker.css') }}" rel="stylesheet" />
-    <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+    <link href="{{ asset('public/css/datatables.style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('public/css/litepicker.css') }}" rel="stylesheet" />
+    <link href="{{ asset('public/css/styles.css') }}" rel="stylesheet" />
     
     <script data-search-pseudo-elements defer src="{{ asset('vendor/fontawesome-free-6.5.2-web/js/all.min.js') }}"></script>
     <script src="{{ asset('node_modules/feather-icons/dist/feather.min.js') }}"></script>
@@ -36,7 +36,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('vendor/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/scripts.js') }}"></script>
+    <script src="{{ asset('public/admin/js/scripts.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <script src="{{ asset('assets/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('assets/demo/chart-bar-demo.js') }}"></script>
@@ -45,10 +45,10 @@
     <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
     <script src="{{ asset('js/litepicker.js') }}"></script>
     <script src="{{ asset('js/delete-button.js') }}"></script>
-    <script src="{{ asset('js/datatables/datatables-custom-regular.js') }}"></script>
-    <script src="{{ asset('js/datatables/datatables-product-adons.js') }}"></script>
-    <script src="{{ asset('js/datatables/datatables-simple-demo.js') }}"></script>
-    <script src="{{ asset('js/button.deal.js') }}"></script>
+    <script src="{{ asset('public/admin/js/datatables/datatables-custom-regular.js') }}"></script>
+    <script src="{{ asset('public/admin/js/datatables/datatables-product-adons.js') }}"></script>
+    <script src="{{ asset('public/admin/js/datatables/datatables-simple-demo.js') }}"></script>
+    <script src="{{ asset('public/admin/js/button.deal.js') }}"></script>
     
     @stack('scripts')
 </body>
