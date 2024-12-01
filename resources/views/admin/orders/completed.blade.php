@@ -44,7 +44,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($completedOrders as $order)
+                                @foreach($completedOrdersThisMonth as $order)
                                 <tr>
                                     <td>{{ $order->id }}</td>
                                     <td>{{ $order->customer_name }}</td>
