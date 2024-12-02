@@ -6,6 +6,8 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\DealController;
 use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\AccountController;
+use App\Http\Controllers\NotificationController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -44,6 +46,19 @@ Route::delete('/products/{product}', [ProductController::class, 'destroy'])->nam
 Route::middleware(['auth'])->group(function () {
     Route::get('/completed-orders', [CompletedOrderController::class, 'index'])->name('completed-orders.index');
     Route::get('/completed-orders/{order}', [CompletedOrderController::class, 'show'])->name('completed-orders.show');
+});
+
+Route::middleware(['auth'])->group(function () {
+    // Reports Routes
+    Route::get('/reports', [ReportController::class, 'index'])->name('reports.index');
+
+    // Account Routes
+    Route::get('/account/profile', [AccountController::class, 'profile'])->name('account.profile');
+    Route::put('/account/profile', [AccountController::class, 'updateProfile'])->name('account.update');
+
+    // Notification Routes
+    Route::get('/alerts', [NotificationController::class, 'getAlerts'])->name('alerts.index');
+    Route::get('/messages', [NotificationController::class, 'getMessages'])->name('messages.index');
 });
 
 Route::resource('discounts', DiscountController::class)

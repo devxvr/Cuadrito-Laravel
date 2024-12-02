@@ -14,6 +14,7 @@ class AddOn extends Model
         'price', 
         'status', 
         'is_disabled'
+        'photo_path'
     ];
 
     protected $casts = [

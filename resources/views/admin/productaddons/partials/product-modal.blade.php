@@ -51,24 +51,34 @@
                                     </div>
                                 </div>
                                 <!-- Add Modal -->
-                            <div class="modal fade" id="modalAdd" tabindex="-1" aria-labelledby="modalAddLabel" aria-hidden="true">
+                                <div class="modal fade" id="modalAdd" tabindex="-1" aria-labelledby="modalAddLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="modalAddLabel">Add New Item</h5>
+                                            <h5 class="modal-title" id="modalAddLabel">Add New Product</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form>
+                                            <form action="{{ route('productaddons.productaddons') }}" method="POST" enctype="multipart/form-data">
+                                                @csrf   
                                                 <div class="mb-3">
-                                                    <label for="itemName" class="form-label">Item Name</label>
-                                                    <input type="text" class="form-control" id="itemName" placeholder="Enter item name">
+                                                    <label for="productName" class="form-label">Product Name</label>
+                                                    <input type="text" class="form-control" id="productName" name="product_name" placeholder="Enter product name" required>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="itemPrice" class="form-label">Price</label>
-                                                    <input type="number" class="form-control" id="itemPrice" placeholder="Enter item price">
+                                                    <label for="flavorName" class="form-label">Flavor Name</label>
+                                                    <input type="text" class="form-control" id="flavorName" name="flavor_name" placeholder="Enter flavor name" required>
                                                 </div>
-                                                <button type="submit" class="btn btn-primary">Add Item</button>
+                                                <div class="mb-3">
+                                                    <label for="productPrice" class="form-label">Price</label>
+                                                    <input type="number" step="0.01" class="form-control" id="productPrice" name="price" placeholder="Enter product price" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="photoUpload" class="form-label">Product Photo</label>
+                                                    <input type="file" class="form-control" id="photoUpload" name="product_photo" accept="image/*">
+                                                    <small class="form-text text-muted">Optional: Upload an image for the product (JPG, PNG, GIF)</small>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Add Product</button>
                                             </form>
                                         </div>
                                     </div>
